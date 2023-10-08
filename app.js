@@ -16,6 +16,7 @@ app.get('/api/calculator/add', async (req, res) => {
     };
 
     const result = await client.AddAsync(args);
+    console.log(result);
 
     res.json({ resultado: result[0].AddResult });
   } catch (error) {
